@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.class
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+*.lock
+
+# Docker
+docker-compose.override.yml
+docker-compose.yml
+Dockerfile.*
+/docker
+
+# Appwrite
+appwrite/config/
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+*.db
+
+# PyQt5
+*.qrc
+*.pyc
+
+# Other files
+*.DS_Store
+.vscode/

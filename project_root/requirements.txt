@@ -1,0 +1,10 @@
+# Requirements for the project
+streamlit
+flask
+pyqt5
+appwrite
+xgboost
+scikit-learn
+numpy
+pandas
+docker
