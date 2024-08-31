@@ -12,7 +12,7 @@ A centralized web console manages policies, and agents monitor network usage and
 - Real-time network monitoring
 
 ## Setup
-Run `setup.sh` to create the project structure and initialize the environment.
+Run `setup.ps1` to create the project structure and initialize the environment.
 
 ## Docker
 Use Docker to manage your environment and containers.
