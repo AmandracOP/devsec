@@ -10,16 +10,19 @@ echo "Building Docker images..."
 docker build -t ${PROJECT_NAME}_web_console:${TAG} -f docker/Dockerfile.web_console .
 docker build -t ${PROJECT_NAME}_windows_agent:${TAG} -f docker/Dockerfile.windows_agent .
 docker build -t ${PROJECT_NAME}_linux_agent:${TAG} -f docker/Dockerfile.linux_agent .
+docker build -t ${PROJECT_NAME}_streamlit:${TAG} -f docker/Dockerfile.streamlit .
 
 # Optionally push images to Docker registry
 echo "Pushing Docker images to registry..."
 docker tag ${PROJECT_NAME}_web_console:${TAG} ${DOCKER_REGISTRY}/${PROJECT_NAME}_web_console:${TAG}
 docker tag ${PROJECT_NAME}_windows_agent:${TAG} ${DOCKER_REGISTRY}/${PROJECT_NAME}_windows_agent:${TAG}
 docker tag ${PROJECT_NAME}_linux_agent:${TAG} ${DOCKER_REGISTRY}/${PROJECT_NAME}_linux_agent:${TAG}
+docker tag ${PROJECT_NAME}_streamlit:${TAG} ${DOCKER_REGISTRY}/${PROJECT_NAME}_streamlit:${TAG}
 
 docker push ${DOCKER_REGISTRY}/${PROJECT_NAME}_web_console:${TAG}
 docker push ${DOCKER_REGISTRY}/${PROJECT_NAME}_windows_agent:${TAG}
 docker push ${DOCKER_REGISTRY}/${PROJECT_NAME}_linux_agent:${TAG}
+docker push ${DOCKER_REGISTRY}/${PROJECT_NAME}_streamlit:${TAG}
 
 # Deploy containers using Docker Compose
 echo "Deploying Docker containers..."
